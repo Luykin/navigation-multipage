@@ -119,7 +119,7 @@
 			<img src="http://p70pqu6ys.bkt.clouddn.com/%E7%BD%91%E7%BA%A2%E9%97%AE%E7%AD%94.png" class="title-label shpc">
 			<div class="w-box flex" v-if="answers">
 				<div class="w-box-item flex" v-for="item in answers">
-					<div class="wbi-title flex">{{item.question}}</div>
+					<div class="wbi-title flex" @click="_wOpen(item.id)">{{item.question}}</div>
 					<div class="wbi-content">
 						<div v-html="item.answer"></div>
 					</div>
@@ -148,16 +148,21 @@
 			_getAnswers() {
 				getAnswers().then((res) => {
 					if (res.data.err_code === SUCCESS_CODE && res.data.data) {
-						console.log(res.data.data)
+						// console.log(res.data.data)
 						this.answers = res.data.data
 					} else {
-            if (res.data.err_msg) {
-              this.$parent._open(this.$root.errorCode[res.data.err_code])
-            } else {
-              this.$parent._open('似乎出错了')
-            }						
+						if (res.data.err_msg) {
+							this.$parent._open(this.$root.errorCode[res.data.err_code])
+						} else {
+							this.$parent._open('似乎出错了')
+						}						
 					}
 				})
+			},
+			_wOpen(id) {
+				// console.log(window.location)
+				// console.log(window.location.origin + '/answer?id=' + id)
+				window.location.href = window.location.origin + '/answer.html?id=' + id
 			}
 		},
 		components: {}
@@ -305,16 +310,15 @@ img{
 	height: auto;
 	min-height: 300px;
 	flex-wrap: wrap;
+	justify-content: flex-start;
 	/*margin: 30px auto;*/
 }
 .w-box-item{
-/*  width: 36%;
-margin: 1% 1.5%;*/
-background: #fff;
-/*height: 220px;*/
-overflow: hidden;
-flex-wrap: wrap;
-align-items: flex-start;
+	background: #fff;
+	overflow: hidden;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	padding-bottom: 10px;
 }
 .wbi-title{
 	width: 90%;

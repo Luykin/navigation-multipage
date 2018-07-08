@@ -60,13 +60,14 @@ export function testToken(tokenTime) {
   }
 }
 export function timeChange(time) {
+  console.log(time)
   let date = new Date(time * 1000)
-  // const Y = date.getYear() + '-'
+  const Y = 2018 + '-'
   const M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-'
   const D = date.getDate() < 10 ? '0' + date.getDate() + ' ' : date.getDate() + ' '
   const h = date.getHours() < 10 ? '0' + date.getHours() + ':' : date.getHours() + ':'
   const m = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()
-  return M + D + h + m
+  return Y + M + D + h + m
 }
 export function encryptedStorage(key, value) {
   let v = JSON.stringify(value)

@@ -32,8 +32,12 @@
   align-content: center;
   justify-content: center;
   opacity: .95;
+  border-radius: 10px;
   overflow: hidden;
-  transform: translate(60%, 80px);
+  position: absolute;
+  top: 140px;
+  right: 20%;
+  /*transform: translate(200%, 80px);*/
 }
 
 .center-position {
@@ -52,13 +56,32 @@
   overflow: hidden;
   /*  animation: gradientOut .5s ease 1 forwards;*/
 }
-
+.input-box-new{
+  width: 100%;
+  height: 45px;
+  margin: 0 auto 30px;
+  overflow: hidden;
+}
+.ibn-warp{
+  box-sizing: border-box;
+  width: 70%;
+  height: 100%;
+  background: #F4F4F4;
+  border-radius: 5px;
+  border: 1px solid #DDDDDD;
+}
+.ibn-warp input {
+  background: #F4F4F4;
+}
 .input-box:hover {
   animation: gradientIn .5s ease 1 forwards;
 }
 
 .inputFocus:hover {
   animation: none !important;
+}
+.ibn-title{
+  margin: 0 10px;
 }
 
 .i-ipnput {
@@ -68,7 +91,7 @@
   height: 100%;
   flex-grow: 1;
   font-size: 15px;
-  /*text-indent: 15px;*/
+  text-indent: 15px;
   min-width: 200px;
   color: #333 !important;
 }
@@ -95,8 +118,8 @@
 }
 
 .iconfont {
-  color: #ff6b4e;
-  color: var(--main-color);
+  color: #999;
+/*  color: var(--main-color);*/
 }
 
 @keyframes gradientIn {
@@ -131,7 +154,7 @@
   background: #ff6b4e;
   background: var(--main-color);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
-  color: #fff;
+  color: #353535;
   font-size: 14px;
   margin: 20px 5%;
   cursor: pointer;
@@ -180,6 +203,15 @@
   flex-wrap: wrap;
   align-content: center;
 }
+.login-box-title-new{
+  width: 100%;
+  height: 60px;
+  font-size: 18px;
+  flex-wrap: wrap;
+  align-content: center;
+  background: #FFD236;
+  margin-bottom: 40px;
+}
 
 .tips-class {
   width: auto;
@@ -198,6 +230,13 @@
   color: #d94d37;
   letter-spacing: 8px;
 }
+.login-title-new{
+  font-size: 20px;
+  font-weight: 600;
+  color: #353535;
+  letter-spacing: 8px;
+/*  margin-bottom: 20px;*/
+}
 
 .min-font {
   width: 100%;
@@ -211,6 +250,7 @@
   flex-shrink: 0;
   flex-grow: 1;
   margin: 0px auto 15px;
+  justify-content: flex-end;
 }
 
 #main-body {
@@ -227,6 +267,7 @@
   /*  box-shadow: 0px 2px 12px rgba(0, 0, 0, .5);*/
   box-shadow: none;
   letter-spacing: 5px;
+
 }
 
 .input-defult {

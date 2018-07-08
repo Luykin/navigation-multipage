@@ -68,31 +68,36 @@
   }
   .w-box-item{
     width: 36%;
-    margin: 1% 1.5%;
     height: 220px;
   }
-  .show-box-cus{
-    width: 64%;
-    padding: 100px 0;
-    min-height: 400px;
-    height: auto;
-    background: #fff;
-    margin: 0 auto 100px;
+  .w-box-item:nth-child(2n) {
+    margin: 1% 10% 1% 4%;
   }
-  .sbc-item{
-    width: 80%;
-    height: 150px;
-    margin: 50px auto 0;
-  }
-  .sbc-item-left{
-    width: 50%;
-    height: 100%;
-  }
-  .sbc-il-item25{
-    width: 100%;
-    height: 25%;
-    justify-content: flex-start;
-  }
+  .w-box-item:nth-child(2n + 1) {
+   margin: 1% 4% 1% 10%;
+ }
+ .show-box-cus{
+  width: 64%;
+  padding: 100px 0;
+  min-height: 400px;
+  height: auto;
+  background: #fff;
+  margin: 0 auto 100px;
+}
+.sbc-item{
+  width: 80%;
+  height: 150px;
+  margin: 50px auto 0;
+}
+.sbc-item-left{
+  width: 50%;
+  height: 100%;
+}
+.sbc-il-item25{
+  width: 100%;
+  height: 25%;
+  justify-content: flex-start;
+}
 }
 
 @media screen and (max-width: 769px) {
@@ -240,7 +245,7 @@
     width: 50%;
   }
   #login-box {
-    width: 35%;
+    width: 30%;
   }
 }
 
@@ -249,7 +254,7 @@
     width: 60%;
   }
   #login-box {
-    width: 38%;
+    width: 32%;
   }
 }
 
@@ -271,9 +276,11 @@
     margin: 0 auto;
   }
   #login-box {
-    transform: translate(0, 50px);
+    /*transform: translate(0, 50px);*/
     margin: 0 auto;
     width: 88%;
+    position: static;
+    transform: translate(0, 50px);
   }
   #footer-item {
     width: 88%;
@@ -288,6 +295,7 @@
     width: 95%;
   }
   #login-box {
+    position: static;
     transform: translate(0, 50px);
     margin: 0 auto;
     width: 95%;
