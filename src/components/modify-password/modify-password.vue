@@ -1,5 +1,6 @@
 <template>
   <div id="main-body">
+    <img src="http://p70pqu6ys.bkt.clouddn.com/%E6%8F%92%E7%94%BB.png" alt="星空网红助手" class="shpc login-pic">
     <div class="login-box" id="login-box">
       <div class="login-box-title-new flex">
         <div class="login-title-new">修改密码</div>

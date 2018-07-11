@@ -1,5 +1,6 @@
 <template>
   <div id="main-body">
+    <img src="http://p70pqu6ys.bkt.clouddn.com/%E6%8F%92%E7%94%BB.png" alt="星空网红助手" class="shpc login-pic">
     <div class="login-box flex" id="login-box">
       <div class="login-box-title-new flex">
         <div class="login-title-new">注册</div>
@@ -34,7 +35,7 @@
         </div>
       </div>
       <label class="input-box-new flex" for='code-input'>
-        <div class="ibn-title">手机帐号：</div>
+        <div class="ibn-title">手机验证：</div>
         <div class="ibn-warp flex">
           <input type="text" placeholder="验证码" class="i-ipnput code" id="code-input" v-model="code" @keyup.enter="_register">
           <div class="flex getcode">

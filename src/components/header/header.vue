@@ -51,7 +51,7 @@
                   <div class="agent-ul-li-right flex ellipsis"></div>
                 </div>
               </el-menu-item>
-              <el-menu-item index="/agent.html#/modify-password" v-show="user" class='flex'>
+              <el-menu-item index="/login.html#/modify-password" v-show="user" class='flex'>
                 <div class="agent-ul-li flex cursor">
                   <div class="agent-ul-li-left flex ellipsis">修改密码</div>
                   <div class="agent-ul-li-right flex ellipsis"></div>
